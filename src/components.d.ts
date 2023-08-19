@@ -5,7 +5,6 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-
 export namespace Components {
     interface MyComponent {
         /**
@@ -22,7 +21,6 @@ export namespace Components {
         "middle": string;
     }
 }
-
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -34,7 +32,6 @@ declare global {
         "my-component": HTMLMyComponentElement;
     }
 }
-
 declare namespace LocalJSX {
     interface MyComponent {
         /**
@@ -54,9 +51,7 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
     }
 }
-
 export { LocalJSX as JSX };
-
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {

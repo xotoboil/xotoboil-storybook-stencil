@@ -3,7 +3,6 @@ export default {
     title: 'Components/MyComponent',
     // this is an example of how to add actions to the story
     parameters: {
-
       cssprops: {
         "button-color": {
           value: "green",
