@@ -11,5 +11,6 @@ export const config: Config = {
   ],
   plugins: [
     sass()
-  ]
+  ],
+  globalStyle: 'src/styles/global.css',
 };

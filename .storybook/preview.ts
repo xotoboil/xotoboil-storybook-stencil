@@ -1,21 +1,21 @@
-import {defineCustomElements} from '../loader';
+import { defineCustomElements } from '../loader';
 
 defineCustomElements();
 
-const tokenContext = require.context(
-	'!!raw-loader!./styles/',
-	true,
-	/.\.(css|less|scss|vue)$/,
-)
+// const tokenContext = require.context(
+// 	'!!raw-loader!./styles/',
+// 	true,
+// 	/.\.(css|less|scss|vue)$/,
+// )
 
-const tokenFiles = tokenContext.keys().map(function(filename) {
-	return { filename: filename, content: tokenContext(filename).default }
-})
+// const tokenFiles = tokenContext.keys().map(function (filename) {
+//   return { filename: filename, content: tokenContext(filename).default }
+// })
 
 export const parameters = {
   designToken: {
     defaultTab: 'Colors',
-    files: tokenFiles,
+    // files: tokenFiles,
     styleInjection: '@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");'
   },
 
@@ -29,17 +29,17 @@ export const parameters = {
     },
   },
   options: {
-		storySort: {
-			method: 'alphabetical',
-			order: [
-				'Intro',
-				['Readme', 'Changelog', 'Style'],
-				'Plugins',
-				'Organismes',
-				'Molecules',
-				'Atomes',
-			],
-			locales: 'en-US',
-		},
-	},
+    storySort: {
+      method: 'alphabetical',
+      order: [
+        'Intro',
+        ['Readme', 'Changelog', 'Style'],
+        'Plugins',
+        'Organismes',
+        'Molecules',
+        'Atomes',
+      ],
+      locales: 'en-US',
+    },
+  },
 }
