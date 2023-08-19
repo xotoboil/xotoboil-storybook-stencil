@@ -5,15 +5,14 @@ export default {
   tags: ['autodocs'],
   decorators: [withDesign],
   argTypes: {
-		first: { defaultValue: 'Winnie', control: 'text' },
-    middle: { defaultValue: 'The', control: 'text' },
-    last: { defaultValue: 'Pooh', control: 'text' },
-	},
+    label: { control: 'text' },
+    slotText: { control: 'text' },
+  },
   parameters: {
     cssprops: { "ui-button-color": { value: "lightgray", control: 'color', description: "The color of the page" } },
   },
 };
 
-const Template = (args) => `<ui-button first="${args.first}" middle="${args.middle}" last="${args.last}"></ui-button>`;
+const Template = (args) => `<ui-button label="${args.label}">${args.slotText}</ui-button>`;
 
 export const UiButton = Template.bind({});
