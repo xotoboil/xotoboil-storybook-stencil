@@ -1,0 +1,9 @@
+:root, :host {
+
+ /**
+ * @tokens Style.css
+ * @presenter Color
+ */
+
+	--border-radius: 0px;
+}
