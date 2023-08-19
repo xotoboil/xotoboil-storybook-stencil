@@ -6,71 +6,53 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyButton {
-        "sideLabel": string;
+    interface UiButton {
+        "label": string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
+    interface UiHome {
         "first": string;
-        /**
-          * The last name
-         */
         "last": string;
-        /**
-          * The middle name
-         */
         "middle": string;
     }
 }
 declare global {
-    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    interface HTMLUiButtonElement extends Components.UiButton, HTMLStencilElement {
     }
-    var HTMLMyButtonElement: {
-        prototype: HTMLMyButtonElement;
-        new (): HTMLMyButtonElement;
+    var HTMLUiButtonElement: {
+        prototype: HTMLUiButtonElement;
+        new (): HTMLUiButtonElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLUiHomeElement extends Components.UiHome, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLUiHomeElement: {
+        prototype: HTMLUiHomeElement;
+        new (): HTMLUiHomeElement;
     };
     interface HTMLElementTagNameMap {
-        "my-button": HTMLMyButtonElement;
-        "my-component": HTMLMyComponentElement;
+        "ui-button": HTMLUiButtonElement;
+        "ui-home": HTMLUiHomeElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyButton {
-        "sideLabel"?: string;
+    interface UiButton {
+        "label"?: string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
+    interface UiHome {
         "first"?: string;
-        /**
-          * The last name
-         */
         "last"?: string;
-        /**
-          * The middle name
-         */
         "middle"?: string;
     }
     interface IntrinsicElements {
-        "my-button": MyButton;
-        "my-component": MyComponent;
+        "ui-button": UiButton;
+        "ui-home": UiHome;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "ui-button": LocalJSX.UiButton & JSXBase.HTMLAttributes<HTMLUiButtonElement>;
+            "ui-home": LocalJSX.UiHome & JSXBase.HTMLAttributes<HTMLUiHomeElement>;
         }
     }
 }

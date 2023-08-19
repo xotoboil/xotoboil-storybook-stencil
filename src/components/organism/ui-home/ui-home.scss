@@ -2,8 +2,8 @@
   display: block;
 }
 
-.my-component {
+.ui-home {
   &__label {
-    color: red
+    color: var(--ui-home-color);
   }
 }

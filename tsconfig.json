@@ -8,6 +8,12 @@
       "node",
       "webpack-env"
     ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "lib": [
       "dom",
       "es2017"
