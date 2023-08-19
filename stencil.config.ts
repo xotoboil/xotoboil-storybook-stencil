@@ -10,7 +10,8 @@ export const config: Config = {
     { type: 'www', serviceWorker: null },
   ],
   plugins: [
-    sass()
-  ],
-  globalStyle: 'src/styles/global.css',
+    sass({
+      injectGlobalPaths: ["src/styles/index.scss"]
+    })
+  ]
 };
