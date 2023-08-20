@@ -1,3 +1,5 @@
+import { h } from 'jsx-dom';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'stories/atom/UiButton',
@@ -8,7 +10,7 @@ export default {
       description: 'the label of the button',
       type: { summary: 'string' },
       defaultValue: { summary: 'click me' },
-    },
+    }
   },
   args: {
     label: 'click me'
@@ -24,6 +26,9 @@ export default {
   },
 };
 
-const Template = (args) => `<ui-button>${args.label}</ui-button>`;
+const Template = (args) => (<ui-button onClick={() => {
+  console.log("Action run")
+  action('button-click')
+}}>{args.label}</ui-button>);
 
 export const UiButton = Template.bind({});

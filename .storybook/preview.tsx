@@ -1,8 +1,5 @@
-import React from 'react';
 import { defineCustomElements } from '../loader';
-import { Title, Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks';
 import readme from './readme.mdx';
-import { create } from '@storybook/theming';
 
 defineCustomElements();
 

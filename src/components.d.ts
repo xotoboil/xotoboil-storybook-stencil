@@ -14,10 +14,6 @@ export namespace Components {
         "last": string;
     }
 }
-export interface UiButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLUiButtonElement;
-}
 declare global {
     interface HTMLUiButtonElement extends Components.UiButton, HTMLStencilElement {
     }
@@ -39,7 +35,6 @@ declare global {
 declare namespace LocalJSX {
     interface UiButton {
         "label"?: string;
-        "onClick"?: (event: UiButtonCustomEvent<any>) => void;
     }
     interface UiHome {
         "first"?: string;

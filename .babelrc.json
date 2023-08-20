@@ -10,8 +10,15 @@
           "firefox": 91
         }
       }
-    ],
-    "@babel/preset-react"
+    ]
   ],
-  "plugins": []
+  "plugins": [
+    "@babel/plugin-syntax-jsx",
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "h"
+      }
+    ]
+  ]
 }
