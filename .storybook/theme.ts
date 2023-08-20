@@ -1,5 +1,5 @@
 // .storybook/YourTheme.js
-import { create } from '@storybook/theming/create';
+import {create} from '@storybook/theming/create';
 
 export default create({
   base: 'light',
@@ -7,7 +7,7 @@ export default create({
   fontCode: 'monospace',
   brandTitle: 'My custom Storybook',
   brandUrl: 'https://example.com',
-  brandImage: "https://placehold.it/350x150",
+  brandImage: './example.png',
   brandTarget: '_self',
   // colorPrimary: '#3A10E5',
   // colorSecondary: '#585C6D',

@@ -11,7 +11,7 @@ export class UiButton {
 
   render() {
     return (
-      <Host><p>{this.label}</p><button><slot></slot></button></Host>
+      <Host><button><slot></slot></button></Host>
     );
   }
 
