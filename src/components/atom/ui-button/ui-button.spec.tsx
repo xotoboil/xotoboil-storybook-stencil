@@ -10,7 +10,7 @@ describe('ui-button', () => {
     expect(page.root).toEqualHtml(`
       <ui-button>
         <mock:shadow-root>
-          <slot></slot>
+          <button><slot></slot></button>
         </mock:shadow-root>
       </ui-button>
     `);

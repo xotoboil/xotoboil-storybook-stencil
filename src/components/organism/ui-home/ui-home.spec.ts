@@ -7,8 +7,9 @@ describe('ui-home', () => {
     expect(root).toEqualHtml(`
       <ui-home>
         <mock:shadow-root>
-          <div>
+          <div class="ui-home">
             Hello, World! I'm
+            <span class="ui-home__label"></span>
           </div>
         </mock:shadow-root>
       </ui-home>
@@ -20,8 +21,11 @@ describe('ui-home', () => {
     expect(root).toEqualHtml(`
       <ui-home first="Stencil" last="'frameworkless'">
         <mock:shadow-root>
-          <div>
-            Hello, World! I'm Stencil
+          <div class="ui-home">
+            Hello, World! I'm
+            <span class="ui-home__label">
+              Stencil 'frameworkless'
+            </span>
           </div>
         </mock:shadow-root>
       </ui-home>
