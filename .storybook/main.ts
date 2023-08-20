@@ -5,6 +5,7 @@ module.exports = {
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
+  staticDirs: ['../public'],
 
   typescript: {
     reactDocgen: 'react-docgen',
@@ -35,7 +36,7 @@ module.exports = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, "../src"),
     }
-        return config;
+    return config;
 
   }
 

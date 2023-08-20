@@ -1,4 +1,4 @@
-import {withDesign} from 'storybook-addon-designs'
+import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'stories/atom/UiButton',
@@ -8,13 +8,16 @@ export default {
     label: {
       control: 'text',
       description: 'the label of the button',
-      type: {summary: 'string'},
-      defaultValue: {summary: 'click me'},
+      type: { summary: 'string' },
+      defaultValue: { summary: 'click me' },
     },
+  },
+  args: {
+    label: 'click me'
   },
   parameters: {
     cssprops: {
-      'ui-button-color': {
+      'ui-custom-button-color': {
         value: 'lightgray',
         control: 'color',
         description: 'the color of the page'

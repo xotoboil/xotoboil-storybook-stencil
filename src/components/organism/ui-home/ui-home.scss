@@ -4,6 +4,6 @@
 
 .ui-home {
   &__label {
-    color: var(--ui-home-color);
+    color: var(--ui-home-custom-color, var(--ui-home-color));
   }
 }
