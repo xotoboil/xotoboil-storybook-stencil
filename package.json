@@ -22,11 +22,13 @@
   "scripts": {
     "prepare": "husky install",
     "build": "stencil build --docs",
+    "build.watch": "stencil build --watch",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
+    "storybook.watch": "concurrently \"yarn storybook\" \"yarn build.watch\"",
     "build-storybook": "storybook build"
   },
   "dependencies": {
@@ -52,6 +54,7 @@
     "@types/webpack-env": "^1.18.1",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "babel-loader": "^8.2.3",
+    "concurrently": "^8.2.0",
     "eslint": "^8.47.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-storybook": "^0.6.13",
