@@ -1,8 +1,6 @@
-import { withDesign } from 'storybook-addon-designs'
 export default {
   title: 'stories/organism/UiHome',
   tags: ['autodocs'],
-  decorators: [withDesign],
   argTypes: {
     first: {
       type: { summary: 'string' },

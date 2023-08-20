@@ -16,7 +16,6 @@ module.exports = {
     "@storybook/addon-links",
     "@ljcl/storybook-addon-cssprops",
     "@storybook/addon-essentials",
-    'storybook-addon-designs',
     "@storybook/addon-interactions",
     '@storybook/preset-scss',
   ],

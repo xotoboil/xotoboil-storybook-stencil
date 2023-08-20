@@ -1,9 +1,7 @@
-import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'stories/atom/UiButton',
   tags: ['autodocs'],
-  decorators: [withDesign],
   argTypes: {
     label: {
       control: 'text',

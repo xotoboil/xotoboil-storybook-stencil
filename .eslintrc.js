@@ -6,10 +6,10 @@ const esConfig = {
     node: true,
   },
   rules: {
-    "@typescript-eslint/no-non-null-assertion": "off",
     "no-multiple-empty-lines": "warn",
 
     // typescript rules
+    "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/form/no-empty-function": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-empty-function": "off",

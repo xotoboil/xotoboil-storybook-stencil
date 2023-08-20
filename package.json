@@ -22,13 +22,13 @@
   "scripts": {
     "prepare": "husky install",
     "build": "stencil build --docs",
-    "build.watch": "stencil build --watch",
+    "build:watch": "stencil build --watch",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
+    "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
-    "storybook.watch": "concurrently \"yarn storybook\" \"yarn build.watch\"",
+    "storybook:watch": "concurrently \"yarn storybook\" \"yarn build:watch\"",
     "build-storybook": "storybook build"
   },
   "dependencies": {
@@ -66,7 +66,6 @@
     "react-dom": "^18.2.0",
     "sass-loader": "^13.3.2",
     "storybook": "^7.3.1",
-    "storybook-addon-designs": "^6.3.1",
     "typescript": "^5.1.6"
   },
   "license": "MIT",
