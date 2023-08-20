@@ -8,14 +8,13 @@ import { Component, Prop, h } from '@stencil/core';
 
 export class UiHome {
   @Prop() first: string;
-  @Prop() middle: string;
   @Prop() last: string;
 
   private getText(): string {
-    return (this.first || '') + (this.middle ? ` ${this.middle}` : '') + (this.last ? ` ${this.last}` : '');
+    return (this.first || '') + (this.last ? ` ${this.last}` : '');
   }
 
   render() {
-    return <div class="ui-home">Hello, World! I'm <span class="ui-home__label">{this.getText()}</span></div>;
+    return <div class="ui-home">Hello, World! <span class="ui-home__label">{this.getText()}</span></div>;
   }
 }

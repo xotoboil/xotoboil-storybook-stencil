@@ -4,29 +4,23 @@ export default {
   argTypes: {
     first: {
       type: { summary: 'string' },
-      defaultValue: { summary: 'Winnie' },
-      control: 'text'
-    },
-    middle: {
-      type: { summary: 'string' },
-      defaultValue: { summary: ' The' },
+      defaultValue: { summary: 'Foo' },
       control: 'text'
     },
     last: {
       type: { summary: 'string' },
-      defaultValue: { summary: 'Pooh' },
+      defaultValue: { summary: ' Bar' },
       control: 'text'
     },
   },
   args: {
-    first: "Winnie",
-    middle: " The",
-    last: "Pooh"
+    first: "Foo",
+    last: "Bar"
   },
   parameters: {
     cssprops: {
       'ui-home-custom-color': {
-        value: 'lightgray',
+        value: 'rgb(0, 128, 255)',
         control: 'color',
         description: 'The color of the page'
       }
@@ -34,5 +28,5 @@ export default {
   },
 };
 
-const Template = (args) => `<ui-home first="${args.first}" middle="${args.middle}" last="${args.last}"></ui-home>`;
+const Template = (args) => `<ui-home first="${args.first}" last="${args.last}"></ui-home>`;
 export const UiHome = Template.bind({});

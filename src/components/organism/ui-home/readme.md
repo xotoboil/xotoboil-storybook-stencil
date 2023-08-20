@@ -11,7 +11,6 @@
 | -------- | --------- | ----------- | -------- | ----------- |
 | `first`  | `first`   |             | `string` | `undefined` |
 | `last`   | `last`    |             | `string` | `undefined` |
-| `middle` | `middle`  |             | `string` | `undefined` |
 
 
 ----------------------------------------------

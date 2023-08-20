@@ -25,8 +25,5 @@ describe('ui-home', () => {
     await page.waitForChanges();
     expect(element.textContent).toEqual(`Hello, World! I'm James Quincy`);
 
-    component.setProperty('middle', 'Earl');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Earl Quincy`);
   });
 });

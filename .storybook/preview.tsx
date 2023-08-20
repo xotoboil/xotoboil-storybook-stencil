@@ -7,10 +7,6 @@ import { create } from '@storybook/theming';
 defineCustomElements();
 
 export const parameters = {
-  designToken: {
-    defaultTab: 'Colors',
-    styleInjection: '@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");'
-  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: { default: 'light' },
   controls: {

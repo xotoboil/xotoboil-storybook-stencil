@@ -16,7 +16,7 @@ export default {
   parameters: {
     cssprops: {
       'ui-custom-button-color': {
-        value: 'lightgray',
+        value: 'red',
         control: 'color',
         description: 'the color of the page'
       }
