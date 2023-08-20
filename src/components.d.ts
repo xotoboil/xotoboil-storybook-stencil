@@ -39,7 +39,7 @@ declare global {
 declare namespace LocalJSX {
     interface UiButton {
         "label"?: string;
-        "onOnClick"?: (event: UiButtonCustomEvent<any>) => void;
+        "onClick"?: (event: UiButtonCustomEvent<any>) => void;
     }
     interface UiHome {
         "first"?: string;

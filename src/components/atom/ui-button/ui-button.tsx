@@ -6,11 +6,11 @@ import { Component, Prop, h, Event, EventEmitter, Host } from '@stencil/core';
   shadow: true,
 })
 export class UiButton {
-  @Event() onClick: EventEmitter;
+  @Event() click: EventEmitter;
   @Prop() label: string;
 
   handleClick(event: UIEvent) {
-    this.onClick.emit(event);
+    this.click.emit(event);
   }
 
   render() {

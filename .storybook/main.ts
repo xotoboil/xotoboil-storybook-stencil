@@ -31,10 +31,18 @@ module.exports = {
   },
 
   webpackFinal: async (config, { configType }) => {
+
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, "../src"),
     }
+
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      loader: require.resolve('babel-loader'),
+    });
+    config.resolve.extensions.push('.ts', '.tsx');
+
     return config;
   }
 }
