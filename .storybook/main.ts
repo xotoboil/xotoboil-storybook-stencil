@@ -13,11 +13,10 @@ module.exports = {
     check: false,
   },
   "addons": [
-    "@storybook/addon-links",
     "@ljcl/storybook-addon-cssprops",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
     '@storybook/preset-scss',
+    '@storybook/addon-mdx-gfm'
   ],
 
   docs: {
