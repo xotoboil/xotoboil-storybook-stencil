@@ -11,8 +11,7 @@
   "unpkg": "dist/xotoboil-storybook-stencil/xotoboil-storybook-stencil.esm.js",
   "engines": {
     "node": "v16.20.1",
-    "npm": ">= 9.8.0",
-    "yarn": ">= 2.0.0"
+    "yarn": ">= 3.0.0"
   },
   "files": [
     "dist/",
