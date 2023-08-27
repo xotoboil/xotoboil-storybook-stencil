@@ -7,11 +7,13 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UiButton {
-        "label": string;
+        "text": string;
+    }
+    interface UiCard {
+        "text": string;
     }
     interface UiHome {
-        "first": string;
-        "last": string;
+        "text": string;
     }
 }
 declare global {
@@ -21,6 +23,12 @@ declare global {
         prototype: HTMLUiButtonElement;
         new (): HTMLUiButtonElement;
     };
+    interface HTMLUiCardElement extends Components.UiCard, HTMLStencilElement {
+    }
+    var HTMLUiCardElement: {
+        prototype: HTMLUiCardElement;
+        new (): HTMLUiCardElement;
+    };
     interface HTMLUiHomeElement extends Components.UiHome, HTMLStencilElement {
     }
     var HTMLUiHomeElement: {
@@ -29,19 +37,23 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ui-button": HTMLUiButtonElement;
+        "ui-card": HTMLUiCardElement;
         "ui-home": HTMLUiHomeElement;
     }
 }
 declare namespace LocalJSX {
     interface UiButton {
-        "label"?: string;
+        "text"?: string;
+    }
+    interface UiCard {
+        "text"?: string;
     }
     interface UiHome {
-        "first"?: string;
-        "last"?: string;
+        "text"?: string;
     }
     interface IntrinsicElements {
         "ui-button": UiButton;
+        "ui-card": UiCard;
         "ui-home": UiHome;
     }
 }
@@ -50,6 +62,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ui-button": LocalJSX.UiButton & JSXBase.HTMLAttributes<HTMLUiButtonElement>;
+            "ui-card": LocalJSX.UiCard & JSXBase.HTMLAttributes<HTMLUiCardElement>;
             "ui-home": LocalJSX.UiHome & JSXBase.HTMLAttributes<HTMLUiHomeElement>;
         }
     }

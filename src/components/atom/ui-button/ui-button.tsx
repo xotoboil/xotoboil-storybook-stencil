@@ -6,13 +6,9 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class UiButton {
-
-  @Prop() label: string;
+  @Prop() text: string;
 
   render() {
-    return (
-      <Host><button><slot></slot></button></Host>
-    );
+    return (<Host><button>{(this.text || '')}</button></Host>);
   }
-
 }

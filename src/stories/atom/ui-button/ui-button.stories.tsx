@@ -5,41 +5,25 @@ export default {
   title: 'stories/atom/UiButton',
   tags: ['autodocs'],
   argTypes: {
-    label: {
+    text: {
       control: 'text',
-      description: 'the label of the button',
+      description: 'text of the button',
       type: { summary: 'string' },
-      defaultValue: { summary: 'click me' },
+      defaultValue: { summary: 'select' },
     }
   },
   args: {
-    label: 'click',
-    hover:'hover'
+    text: 'select',
   },
   parameters: {
     cssprops: {
-      'ui-custom-button-color': {
-        value: 'red',
-        control: 'color',
-        description: 'the color of the page'
-      }
+      'ui-custom-button-color': { value: 'rgb(0, 169, 79)', control: 'color', description: 'color of the page' }
     },
   },
 };
 
 const Template = (args) => (
-  <ui-button onClick={() => {
-    console.log("Click Action run");
-    action('button-click')(args.label);
-  }}
-
-  onMouseOver={() => {
-    console.log("Hover action run");
-    action('button-hover')(args.hover);
-  }}>
-
-    {args.label}
-  </ui-button>
+  <ui-button text={args.text} onClick={() => action('button-select')(args.text)} />
 );
 
 export const UiButton = Template.bind({});

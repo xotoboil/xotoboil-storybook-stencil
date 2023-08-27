@@ -1,10 +1,10 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('ui-button', () => {
+describe('ui-card', () => {
   it('renders', async () => {
     const page = await newE2EPage();
-    await page.setContent('<ui-button><slot></slot></ui-button>');
-    const element = await page.find('ui-button');
+    await page.setContent('<ui-card text="card text"/>');
+    const element = await page.find('ui-card');
     expect(element).toHaveClass('hydrated');
   });
 });

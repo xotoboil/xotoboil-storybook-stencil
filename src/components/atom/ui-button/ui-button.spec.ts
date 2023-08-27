@@ -2,15 +2,15 @@ import { newSpecPage } from '@stencil/core/testing';
 import { UiButton } from './ui-button';
 
 describe('ui-button', () => {
-  it('renders', async () => {
+  it('renders with values', async () => {
     const page = await newSpecPage({
       components: [UiButton],
-      html: `<ui-button></ui-button>`,
+      html: `<ui-button text="select"/>`,
     });
     expect(page.root).toEqualHtml(`
-      <ui-button>
+      <ui-button text="select">
         <mock:shadow-root>
-          <button><slot></slot></button>
+          <button>select</button>
         </mock:shadow-root>
       </ui-button>
     `);

@@ -2,30 +2,19 @@ import { newSpecPage } from '@stencil/core/testing';
 import { UiHome } from './ui-home';
 
 describe('ui-home', () => {
-  it('renders', async () => {
-    const { root } = await newSpecPage({ components: [UiHome], html: '<ui-home></ui-home>', });
-    expect(root).toEqualHtml(`
-      <ui-home>
-        <mock:shadow-root>
-          <div class="ui-home">
-            Hello, World! I'm
-            <span class="ui-home__label"></span>
-          </div>
-        </mock:shadow-root>
-      </ui-home>
-    `);
-  });
-
   it('renders with values', async () => {
-    const { root } = await newSpecPage({ components: [UiHome], html: `<ui-home first="Stencil" last="'frameworkless'"></ui-home>`, });
+    const { root } = await newSpecPage({ components: [UiHome], html: `<ui-home text="header text"/>` });
+
     expect(root).toEqualHtml(`
-      <ui-home first="Stencil" last="'frameworkless'">
+      <ui-home text="header text">
         <mock:shadow-root>
           <div class="ui-home">
-            Hello, World! I'm
-            <span class="ui-home__label">
-              Stencil 'frameworkless'
-            </span>
+            <div class="ui-home__header">
+              header text
+            </div>
+            <div class="ui-home__content">
+              <slot name="content" v-bind="scope">
+            </div>
           </div>
         </mock:shadow-root>
       </ui-home>

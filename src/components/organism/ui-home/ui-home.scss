@@ -3,7 +3,14 @@
 }
 
 .ui-home {
-  &__label {
-    color: var(--ui-home-custom-color, var(--ui-home-color));
+  background: var(--ui-custom-home-color, var(--ui-home-color, var(--ui-home-color)));
+  padding: 10px;
+
+  &__header {
+    color: white;
+  }
+
+  &__content {
+    padding: 10px;
   }
 }

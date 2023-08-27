@@ -1,12 +1,16 @@
 # ui-button
 
+
+
 <!-- Auto Generated Below -->
+
 
 ## Properties
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `label`  | `label`   |             | `string` | `undefined` |
+| `text`   | `text`    |             | `string` | `undefined` |
+
 
 ----------------------------------------------
 
