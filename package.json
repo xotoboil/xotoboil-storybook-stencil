@@ -10,7 +10,7 @@
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/xotoboil-storybook-stencil/xotoboil-storybook-stencil.esm.js",
   "engines": {
-    "node": "v16.20.1",
+    "node": "v18.16.0",
     "yarn": ">= 3.0.0"
   },
   "files": [
@@ -47,7 +47,6 @@
     "@ljcl/storybook-addon-cssprops": "^3.1.0",
     "@storybook/addon-a11y": "^7.4.0-alpha.2",
     "@storybook/addon-essentials": "^7.4.0-alpha.2",
-    "@storybook/addon-mdx-gfm": "^7.4.0-alpha.2",
     "@storybook/html-webpack5": "^7.4.0-alpha.2",
     "@storybook/manager-api": "^7.4.0-alpha.2",
     "@storybook/theming": "^7.4.0-alpha.2",

@@ -8,8 +8,7 @@ module.exports = {
   addons: [
     "@ljcl/storybook-addon-cssprops",
     "@storybook/addon-a11y",
-    "@storybook/addon-essentials",
-    "@storybook/addon-mdx-gfm",
+    "@storybook/addon-essentials"
   ],
 
   docs: { autodocs: "tag", defaultName: "readme" },
