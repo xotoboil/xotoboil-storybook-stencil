@@ -13,7 +13,8 @@ export default {
     }
   },
   args: {
-    label: 'click me'
+    label: 'click',
+    hover:'hover'
   },
   parameters: {
     cssprops: {
@@ -26,9 +27,19 @@ export default {
   },
 };
 
-const Template = (args) => (<ui-button onClick={() => {
-  console.log("Action run")
-  action('button-click')
-}}>{args.label}</ui-button>);
+const Template = (args) => (
+  <ui-button onClick={() => {
+    console.log("Click Action run");
+    action('button-click')(args.label);
+  }}
+
+  onMouseOver={() => {
+    console.log("Hover action run");
+    action('button-hover')(args.hover);
+  }}>
+
+    {args.label}
+  </ui-button>
+);
 
 export const UiButton = Template.bind({});

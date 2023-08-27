@@ -28,5 +28,8 @@ export default {
   },
 };
 
-const Template = (args) => `<ui-home first="${args.first}" last="${args.last}"></ui-home>`;
+const Template = (args) => `<ui-home first="${args.first}" last="${args.last}">
+<ui-button></ui-button>
+
+</ui-home>`;
 export const UiHome = Template.bind({});

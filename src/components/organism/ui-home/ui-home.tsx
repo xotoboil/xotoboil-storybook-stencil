@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component,Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'ui-home',
@@ -15,6 +15,6 @@ export class UiHome {
   }
 
   render() {
-    return <div class="ui-home">Hello, World! <span class="ui-home__label">{this.getText()}</span></div>;
+    return  <Host><div class="ui-home">Hello, World! <span class="ui-home__label">{this.getText()}</span></div></Host>;
   }
 }

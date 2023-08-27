@@ -1,47 +1,33 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  staticDirs: ['../public'],
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  staticDirs: ["../public"],
+  typescript: { reactDocgen: "react-docgen", skipBabel: true, check: false },
 
-  typescript: {
-    reactDocgen: 'react-docgen',
-    skipBabel: true,
-    check: false,
-  },
-  "addons": [
+  addons: [
     "@ljcl/storybook-addon-cssprops",
+    "@storybook/addon-a11y",
     "@storybook/addon-essentials",
-    '@storybook/preset-scss',
-    '@storybook/addon-mdx-gfm'
+    "@storybook/addon-mdx-gfm",
   ],
 
-  docs: {
-    autodocs: 'tag',
-    defaultName: 'readme',
-  },
+  docs: { autodocs: "tag", defaultName: "readme" },
 
-  "framework": {
-    name: "@storybook/html-webpack5",
-    options: {}
-  },
+  framework: { name: "@storybook/html-webpack5", options: {} },
 
   webpackFinal: async (config, { configType }) => {
-
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(__dirname, "../src"),
-    }
+      "@": path.resolve(__dirname, "../src"),
+    };
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
-      loader: require.resolve('babel-loader'),
+      loader: require.resolve("babel-loader"),
     });
-    config.resolve.extensions.push('.ts', '.tsx');
 
+    config.resolve.extensions.push(".ts", ".tsx");
     return config;
-  }
-}
+  },
+};

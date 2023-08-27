@@ -4,10 +4,20 @@
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
-    "types": [ "node", "webpack-env" ],
+    "types": [
+      "node",
+      "webpack-env"
+    ],
     "baseUrl": ".",
-    "paths": { "@/*": [ "src/*" ] },
-    "lib": [ "dom", "es2017" ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",
